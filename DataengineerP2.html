@@ -97,11 +97,9 @@ a Cloud IAM policy to grant access to all these users.</li>
 <p>You have a data stored in BigQuery. The data in the BigQuery dataset must be highly available. You need to define a storage, backup, and recovery strategy of this data that minimizes cost. How should you configure the BigQuery table that have a recovery point objective (RPO) of 30 days?</p>
 <ul class="radio-list">
 <li><label><input type="radio" data-question="1" data-content="0" /> A. Set the BigQuery dataset to be regional. In the event of an emergency, use a point-in-time snapshot to recover the data.</label></li>
-<li>( ) B. Set the BigQuery dataset to be regional. Create a scheduled query to make copies of the data to tables suffixed with the time of the backup. In the event of an
-emergency, use the backup copy of the table.</li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Set the BigQuery dataset to be regional. Create a scheduled query to make copies of the data to tables suffixed with the time of the backup. In the event of an emergency, use the backup copy of the table.</label></li>
 <li><label><input type="radio" data-question="0" data-content="1" /> C. Set the BigQuery dataset to be multi-regional. In the event of an emergency, use a point-in-time snapshot to recover the data.</label></li>
-<li>( ) D. Set the BigQuery dataset to be multi-regional. Create a scheduled query to make copies of the data to tables suffixed with the time of the backup. In the event of an
-emergency, use the backup copy of the table.</li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Set the BigQuery dataset to be multi-regional. Create a scheduled query to make copies of the data to tables suffixed with the time of the backup. In the event of an emergency, use the backup copy of the table.</label></li>
 </ul>
 </li>
 <li>
@@ -152,18 +150,12 @@ emergency, use the backup copy of the table.</li>
 </ul>
 </li>
 <li>
-<p>You are operating a Cloud Dataflow streaming pipeline. The pipeline aggregates events from a Cloud Pub/Sub subscription source, within a window, and sinks the
-resulting aggregation to a Cloud Storage bucket. The source has consistent throughput. You want to monitor an alert on behavior of the pipeline with Cloud
-Stackdriver to ensure that it is processing data. Which Stackdriver alerts should you create?</p>
+<p>You are operating a Cloud Dataflow streaming pipeline. The pipeline aggregates events from a Cloud Pub/Sub subscription source, within a window, and sinks the resulting aggregation to a Cloud Storage bucket. The source has consistent throughput. You want to monitor an alert on behavior of the pipeline with Cloud Stackdriver to ensure that it is processing data. Which Stackdriver alerts should you create?</p>
 <ul class="radio-list">
-<li>( ) A. An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the
-destination</li>
-<li>(x) B. An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the
-destination</li>
-<li>( ) C. An alert based on a decrease of instance/storage/used_bytes for the source and a rate of change increase of subscription/ num_undelivered_messages for the
-destination</li>
-<li>( ) D. An alert based on an increase of instance/storage/used_bytes for the source and a rate of change decrease of subscription/ num_undelivered_messages for the
-destination</li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. An alert based on a decrease of subscription/num_undelivered_messages for the source and a rate of change increase of instance/storage/ used_bytes for the destination</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. An alert based on an increase of subscription/num_undelivered_messages for the source and a rate of change decrease of instance/storage/ used_bytes for the destination</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. An alert based on a decrease of instance/storage/used_bytes for the source and a rate of change increase of subscription/ num_undelivered_messages for the destination</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. An alert based on an increase of instance/storage/used_bytes for the source and a rate of change decrease of subscription/ num_undelivered_messages for the destination</label></li>
 </ul>
 </li>
 <li>
@@ -290,10 +282,8 @@ following requirements:</p>
 <li><label><input type="checkbox" data-question="0" data-content="1" /> A. Increase the number of max workers</label></li>
 <li><label><input type="checkbox" data-question="0" data-content="1" /> B. Use a larger instance type for your Dataflow workers</label></li>
 <li><label><input type="checkbox" data-question="1" data-content="0" /> C. Change the zone of your Dataflow pipeline to run in us-central1</label></li>
-<li>[ ] D. Create a temporary table in Bigtable that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new
-pipeline to write from Bigtable to BigQuery</li>
-<li>[ ] E. Create a temporary table in Cloud Spanner that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new
-pipeline to write from Cloud Spanner to BigQuery</li>
+<li><label><input type="checkbox" data-question="1" data-content="0" /> D. Create a temporary table in Bigtable that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Bigtable to BigQuery</label></li>
+<li><label><input type="checkbox" data-question="1" data-content="0" /> E. Create a temporary table in Cloud Spanner that will act as a buffer for new data. Create a new step in your pipeline to write to this table first, and then create a new pipeline to write from Cloud Spanner to BigQuery</label></li>
 </ul>
 </li>
 <li>
@@ -335,8 +325,7 @@ pipeline to write from Cloud Spanner to BigQuery</li>
 </ul>
 </li>
 <li>
-<p>You are managing a Cloud Dataproc cluster. You need to make a job run faster while minimizing costs, without losing work in progress on your clusters. What should you
-do?</p>
+<p>You are managing a Cloud Dataproc cluster. You need to make a job run faster while minimizing costs, without losing work in progress on your clusters. What should you do?</p>
 <ul class="radio-list">
 <li><label><input type="radio" data-question="1" data-content="0" /> A. Increase the cluster size with more non-preemptible workers.</label></li>
 <li><label><input type="radio" data-question="1" data-content="0" /> B. Increase the cluster size with preemptible worker nodes, and configure them to forcefully decommission.</label></li>
@@ -348,352 +337,246 @@ do?</p>
 <p>You're using Bigtable for a real-time application, and you have a heavy load that is a mix of read and writes. You've recently identified an additional use case and need to perform hourly an analytical job to calculate certain statistics across the whole database. You need to ensure both the reliability of your production application as well as the analytical workload. What should you do?</p>
 <ul class="radio-list">
 <li><label><input type="radio" data-question="1" data-content="0" /> A. Export Bigtable dump to GCS and run your analytical job on top of the exported files.</label></li>
-<li>( ) B. Add a second cluster to an existing instance with a multi-cluster routing, use live-traffic app profile for your regular workload and batch-analytics profile for the
-analytics workload.</li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Add a second cluster to an existing instance with a multi-cluster routing, use live-traffic app profile for your regular workload and batch-analytics profile for the analytics workload.</label></li>
 <li><label><input type="radio" data-question="0" data-content="1" /> C. Add a second cluster to an existing instance with a single-cluster routing, use live-traffic app profile for your regular workload and batch-analytics profile for the analytics workload.</label></li>
 <li><label><input type="radio" data-question="1" data-content="0" /> D. Increase the size of your existing cluster twice and execute your analytics workload on your new resized cluster.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You want to automate execution of a multi-step data pipeline running on Google Cloud. The pipeline includes Dataproc and Dataflow jobs that have multiple dependencies
+on each other. You want to use managed services where possible, and the pipeline will run every day. Which tool should you use?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. cron</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Cloud Composer</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Cloud Scheduler</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Workflow Templates on Dataproc</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You decided to use Cloud Datastore to ingest vehicle telemetry data in real time. You want to build a storage system that will account for the long-term data growth, while keeping the costs low. You also want to create snapshots of the data periodically, so that you can make a point-in-time (PIT) recovery, or clone a copy of the data for Cloud Datastore in a different environment. You want to archive these snapshots for a long time. Which two methods can accomplish this? (Choose two.)</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> A. Use managed export, and store the data in a Cloud Storage bucket using Nearline or Coldline class.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Use managed export, and then import to Cloud Datastore in a separate project under a unique namespace reserved for that export.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Use managed export, and then import the data into a BigQuery table created just for that export, and delete temporary export files.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Write an application that uses Cloud Datastore client libraries to read all the entities. Treat each entity as a BigQuery table row via BigQuery streaming insert.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> E. Write an application that uses Cloud Datastore client libraries to read all the entities. Format the exported data into a JSON file. Apply compression before storing the data in Cloud Source Repositories.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You work on a regression problem in a natural language processing domain, and you have 100M labeled examples in your dataset. You have randomly shuffled your data and split your dataset into train and test samples (in a 90/10 ratio). After you trained the neural network and evaluated your model on a test set, you discover that the root-mean-squared error (RMSE) of your model is twice as high on the train set as on the test set. How should you improve the performance of your model?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Increase the share of the test sample in the train-test split.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Try to collect more data and increase the size of your dataset.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Try out regularization techniques (e.g., dropout of batch normalization) to avoid overfitting.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Increase the complexity of your model by, e.g., introducing an additional layer or increase sizing the size of vocabularies or n-grams used.</label></li>
+<li>
+<p>You are designing a cloud-native historical data processing system to meet the following conditions:
+        The data being analyzed is in CSV, Avro, and PDF formats and will be accessed by multiple analysis tools
+        including Dataproc, BigQuery, and Compute
+        Engine.
+        A batch pipeline moves daily data.
+        Performance is not a factor in the solution.</p>
+</li>
+<li>
+<p>( ) A. Create a Dataproc cluster with high availability. Store the data in HDFS, and perform analysis as needed.</p>
+</li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Store the data in BigQuery. Access the data using the BigQuery Connector on Dataproc and Compute Engine.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Store the data in a regional Cloud Storage bucket. Access the bucket directly using Dataproc, BigQuery, and Compute Engine.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Store the data in a multi-regional Cloud Storage bucket. Access the data directly using Dataproc, BigQuery, and Compute Engine</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are building an application to share financial market data with consumers, who will receive data feeds. Data is collected from the markets in real time.
+        Consumers will receive the data in the following ways:
+        Real-time event stream
+        ANSI SQL access to real-time stream and historical data
+        Batch historical exports
+        Which solution should you use?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Cloud Dataflow, Cloud SQL, Cloud Spanner</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Cloud Pub/Sub, Cloud Storage, BigQuery</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Cloud Dataproc, Cloud Dataflow, BigQuery</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Cloud Pub/Sub, Cloud Dataproc, Cloud SQL    </label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are designing a cloud-native historical data processing system to meet the following conditions:
+            The data being analyzed is in CSV, Avro, and PDF formats and will be accessed by multiple analysis tools
+            including Dataproc, BigQuery, and Compute
+            Engine.</p>
+<pre><code>    A batch pipeline moves daily data.
+
+    Performance is not a factor in the solution.
+
+    The solution design should maximize availability.
+    How should you design data storage for this solution?
+</code></pre>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Create a Dataproc cluster with high availability. Store the data in HDFS, and perform analysis as needed.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Store the data in BigQuery. Access the data using the BigQuery Connector on Dataproc and Compute Engine.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Store the data in a regional Cloud Storage bucket. Access the bucket directly using Dataproc, BigQuery, and Compute Engine.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Store the data in a multi-regional Cloud Storage bucket. Access the data directly using Dataproc, BigQuery, and Compute Engine</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are building an application to share financial market data with consumers, who will receive data feeds. Data is collected from the markets in real time.</p>
+<pre><code>Consumers will receive the data in the following ways:
+
+Real-time event stream
+
+ANSI SQL access to real-time stream and historical data
+
+Batch historical exports
+
+Which solution should you use?
+</code></pre>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Cloud Dataflow, Cloud SQL, Cloud Spanner</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Cloud Pub/Sub, Cloud Storage, BigQuery </label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Cloud Dataproc, Cloud Dataflow, BigQuery</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Cloud Pub/Sub, Cloud Dataproc, Cloud SQL</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You have historical data covering the last three years in BigQuery and a data pipeline that delivers new data to BigQuery daily. You have noticed that when the Data Science team runs a query filtered on a date column and limited to 30 to 90 days of data, the query scans the entire table. You also noticed that your bill is increasing more quickly than you expected. You want to resolve the issue as cost-effectively as possible while maintaining the ability to conduct SQL queries. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> A. Re-create the tables using DDL. Partition the tables by a column containing a TIMESTAMP or DATE Type.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Recommend that the Data Science team export the table to a CSV file on Cloud Storage and use Cloud Datalab to explore the data by reading the files directly.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Modify your pipeline to maintain the last 3090"€a days of data in one table and the longer history in a different table to minimize full table scans over the entire history.</label></li>
+<li>( ) D. Write an Apache Beam pipeline that creates a BigQuery table per day. Recommend that the Data Science team use wildcards on the table name suffixes to select
+the data they need.</li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You have a requirement to insert minute-resolution data from 50,000 sensors into a BigQuery table. You expect significant growth in data volume and need the data to be available within 1 minute of ingestion for real-time analysis of aggregated trends. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Use bq load to load a batch of sensor data every 60 seconds.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Use a Cloud Dataflow pipeline to stream data into the BigQuery table.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Use the INSERT statement to insert a batch of data every 60 seconds.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Use the MERGE statement to apply updates in batch every 60 seconds.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>A data scientist has created a BigQuery ML model and asks you to create an ML pipeline to serve predictions. You have a REST API application with the requirement to serve predictions for an individual user ID with latency under 100 milliseconds. You use the following query to generate predictions: SELECT predicted_label, user_id FROM M1L.PREDICT (MODEL ‘dataset.model', table user_features). How should you create the ML pipeline?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Add a WHERE clause to the query, and grant the BigQuery Data Viewer role to the application service account.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Create an Authorized View with the provided query. Share the dataset that contains the view with the application service account.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Create a Dataflow pipeline using BigQuerylO to read results from the query. Grant the Dataflow Worker role to the application service account.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Create a Dataflow pipeline using BigQuerylO to read predictions for all users from the query. Write the results to Bigtable using BigtablelO. Grant the Bigtable Reader role to the application service account so that the application can read predictions for individual users from Bigtable.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are building a new data pipeline to share data between two different types of applications: jobs generators and job runners. Your solution must scale to accommodate increases in usage and must accommodate the addition of new applications without negatively affecting the performance of existing ones. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Create an API using App Engine to receive and send messages to the applications</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Use a Cloud Pub/Sub topic to publish jobs, and use subscriptions to execute them  </label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Create a table on Cloud SQL, and insert and delete rows with the job information</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Create a table on Cloud Spanner, and insert and delete rows with the job information</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are building a new application that you need to collect data from in a scalable way. Data arrives continuously from the application throughout the day, and you expect to generate approximately 150 GB of JSON data per day by the end of the year. Your requirements are:</p>
+<pre><code>Decoupling producer from consumer
+
+Space and cost-efficient storage of the raw ingested data, which is to be stored indefinitely
+
+Near real-time SQL query
+
+Maintain at least 2 years of historical data, which will be queried with SQL
+Which pipeline should you use to meet these requirements?
+</code></pre>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Create an application that provides an API. Write a tool to poll the API and write data to Cloud Storage as gzipped JSON files.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Create an application that writes to a Cloud SQL database to store the data. Set up periodic exports of the database to write to Cloud Storage and load into BigQuery.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Create an application that publishes events to Cloud Pub/Sub, and create Spark jobs on Cloud Dataproc to convert the JSON data to Avro format, stored on HDFS on Persistent Disk.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Create an application that publishes events to Cloud Pub/Sub, and create a Cloud Dataflow pipeline that transforms the JSON event payloads to Avro, writing the data to Cloud Storage and BigQuery.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You have a query that filters a BigQuery table using a WHERE clause on timestamp and ID columns. By using bq query *"-dry_run you learn that the query triggers a full scan of the table, even though the filter on timestamp and ID select a tiny fraction of the overall data. You want to reduce the amount of data scanned by BigQuery with minimal changes to existing SQL queries. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Create a separate table for each ID.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Use the LIMIT keyword to reduce the number of rows returned.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> C. Recreate the table with a partitioning column and clustering column.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Use the bq query -maximum_bytes_billed flag to restrict the number of bytes billed.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You store historic data in Cloud Storage. You need to perform analytics on the historic data. You want to use a solution to detect invalid data entries and perform data
+transformations that will not require programming or knowledge of SQL.
+What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Use Cloud Dataflow with Beam to detect errors and perform transformations.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Use Cloud Dataprep with recipes to detect errors and perform transformations.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Use Cloud Dataproc with a Hadoop job to detect errors and perform transformations.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Use federated tables in BigQuery with queries to detect errors and perform transformations.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You need to copy millions of sensitive patient records from a relational database to BigQuery. The total size of the database is 10 TB. You need to design a solution that is secure and time-efficient. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Export the records from the database as an Avro file. Upload the file to GCS using gsutil, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Export the records from the database as an Avro file. Copy the file onto a Transfer Appliance and send it to Google, and then load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Export the records from the database into a CSV file. Create a public URL for the CSV file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the CSV file into BigQuery using the BigQuery web UI in the GCP Console.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Export the records from the database as an Avro file. Create a public URL for the Avro file, and then use Storage Transfer Service to move the file to Cloud Storage. Load the Avro file into BigQuery using the BigQuery web UI in the GCP Console.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You need to migrate a 2TB relational database to Google Cloud Platform. You do not have the resources to significantly refactor the application that uses this database and cost to operate is of primary concern. Which service do you select for storing and serving your data?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Cloud Spanner</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Cloud Bigtable</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Cloud Firestore</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> D. Cloud SQL</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are creating a new pipeline in Google Cloud to stream loT data from Cloud Pub/Sub through Cloud Dataflow to BigQuery. While previewing the data, you notice that roughly 2% of the data appears to be corrupt. You need to modify the Cloud Dataflow pipeline to filter out this corrupt data. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Add a Sidelnput that returns a Boolean if the element is corrupt.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> B. Add a ParDo transform in Cloud Dataflow to discard corrupt elements.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> C. Add a Partition transform in Cloud Dataflow to separate valid data from corrupt data.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Add a GroupByKey transform in Cloud Dataflow to group all of the valid data together and discard the rest.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>You are designing an Apache Beam pipeline to enrich data from Cloud Pub/Sub with static reference data from BigQuery. The reference data is small enough to fit in memory on a single worker. The pipeline should write enriched results to BigQuery for analysis. Which job type and transforms should this pipeline use?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Batch job, PubSublO, side-inputs</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Streaming job, PubSublO, JdbclO, side-outputs</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> C. Streaming job, PubSublO, BigQueryl0, side-inputs</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> D. Streaming job, PubSublO, BigQuerylO, side-outputs</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<p>Your company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling of CDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)</p>
+<ul class="checklist">
+<li><label><input type="checkbox" data-question="1" data-content="0" /> A. Perform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table.</label></li>
+<li><label><input type="checkbox" data-question="0" data-content="1" /> B. Insert each new CDC record and corresponding operation type to a'staging table in real time.</label></li>
+<li><label><input type="checkbox" data-question="1" data-content="0" /> C. Periodically DELETE outdated records from the reporting table.</label></li>
+<li><label><input type="checkbox" data-question="0" data-content="1" /> D: Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.</label></li>
+<li><label><input type="checkbox" data-question="1" data-content="0" /> E. Insert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of each unique record.</label></li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<p>Your company is in the process of migrating its on-premises data warehousing solutions to BigQuery. The existing data warehouse uses trigger-based change data capture (CDC) to apply updates from multiple transactional database sources on a daily basis. With BigQuery, your company hopes to improve its handling of CDC so that changes to the source systems are available to query in BigQuery in near-real time using log-based CDC streams, while also optimizing for the performance of applying changes to the data warehouse. Which two steps should they take to ensure that changes are available in the BigQuery reporting table with minimal latency while reducing compute overhead? (Choose two.)</p>
+<ul class="checklist">
+<li><label><input type="checkbox" data-question="1" data-content="0" /> A. Perform a DML INSERT, UPDATE, or DELETE to replicate each individual CDC record in real time directly on the reporting table. </label></li>
+<li><label><input type="checkbox" data-question="0" data-content="1" /> B. Insert each new CDC record and corresponding operation type to a'staging table in real time.</label></li>
+<li><label><input type="checkbox" data-question="1" data-content="0" /> C. Periodically DELETE outdated records from the reporting table.</label></li>
+<li><label><input type="checkbox" data-question="0" data-content="1" /> D: Periodically use a DML MERGE to perform several DML INSERT, UPDATE, and DELETE operations at the same time on the reporting table.</label></li>
+<li>[ ] E. Insert each new CDC record and corresponding operation type in real time to the reporting table, and use a materialized view to expose only the newest version of
+each unique record.</li>
 </ul>
 </li>
 <li>
-<p>Sample</p>
+<p>The marketing team at your organization provides regular updates of a segment of your customer dataset. The marketing team has given you a CSV with 1 million records that must be updated in BigQuery. When you use the UPDATE statement in BigQuery, you receive a quotaExceeded error. What should you do?</p>
 <ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-</ul>
-</li>
-<li>
-<p>Sample</p>
-<ul class="radio-list">
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
-<li><label><input type="radio" data-question="1" data-content="0" /></label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> A. Reduce the number of records updated each day to stay within the BigQuery UPDATE DML statement limit.</label></li>
+<li><label><input type="radio" data-question="1" data-content="0" /> B. Increase the BigQuery UPDATE DML statement limit in the Quota management section of the Google Cloud Platform Console.</label></li>
+<li><label><input type="radio" data-question="0" data-content="1" /> C. Split the source CSV file into smaller CSV files in Cloud Storage to reduce the number of BigQuery UPDATE DML statements per BigQuery job.</label></li>
+<li>( ) D. Import the new records from the CSV file into a new BigQuery table. Create a BigQuery job that merges the new records with the existing records and writes the
+results to a new BigQuery table.</li>
 </ul>
 </li>
 </ol>
